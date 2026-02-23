@@ -1,0 +1,10 @@
+apiversion:
+kind: 
+metadata: 
+   name: 
+   labels:
+   app:
+spec:
+  volumes:
+  -name:
+     
