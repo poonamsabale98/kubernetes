@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginxnp
+  labels: 
+    app: nginxnp
+spec:
+  containers:
+    - name: nginx
+      image: nginx:latest
+      ports:
+      - containerPort: 80
+---
+
+apiVersion:  v1
+Kind: Service
+metadata:
+  name: nodeport
+  labels: 
+   app: nodeport
+spec:
+  selector: 
+    app: nginxnp
+  ports:
+  - protocol: TCP
+    ports: 80
+    targetports: 80
+  type: nodeport
