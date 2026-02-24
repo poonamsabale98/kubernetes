@@ -24,6 +24,6 @@ spec:
     app: nginxnp
   ports:
   - protocol: TCP
-    ports: 80
-    targetports: 80
-  type: nodeport
+    port: 80
+    targetport: 80
+  type: Nodeport
