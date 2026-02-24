@@ -10,7 +10,7 @@ spec:
     - name: 
       image: nginx:latest
       ports:
-      - conatainerport: 80
+      - containerport: 80
 ---
 apiVersion: v1
 kind: Service
