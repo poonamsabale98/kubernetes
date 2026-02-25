@@ -29,7 +29,7 @@ spec:
            cpu: 300m
            memory: 300mi
          limits:          #maximum resource allocation for the container
-           cpu: 600mi
+           cpu: 600m
            memory: 600mi 
 ---
 apiVersion:  autoscaling/v2 
@@ -46,7 +46,7 @@ spec:
    minReplicas: 1    #minimum number of replicas for the deployment
    maxReplicas: 2    #maximum number of replicas for the deployment
    metrics: 
-      - type: resource
+      - type: Resource
         resource: 
           name: cpu
           target:  
