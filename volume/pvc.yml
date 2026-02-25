@@ -8,7 +8,7 @@ spec:
   storageClassName: standard
   volumeMode: Filesystem
   accessModes:
-     ReadWriteOnce
+    - ReadWriteOnce
   resources:
     requests:
       storage: 4Gi

@@ -7,12 +7,12 @@ metadata:
 spec:
   volumes:
   - name: vol
-    persistantVolumeClaim:
+    persistentVolumeClaim:
       claimName: pvc
   containers: 
     - name: nginx
       image: nginx:latest
-      volumeMount:
+      volumeMounts:
       - name: vol
         mountpath: /usr/share/nginx/html
       ports:
