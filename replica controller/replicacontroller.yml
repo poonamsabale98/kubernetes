@@ -1,0 +1,21 @@
+apiVersion:  v1 
+kind:   ReplicationController
+metadata:
+  name: nginxrc
+  labels:
+    app: nginxrc
+spec:
+  replicas: 3
+  selector:
+    app: nginxrc
+  template:
+    metadata:
+      name: nginxrc
+      labels:
+        app: nginxrc
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
