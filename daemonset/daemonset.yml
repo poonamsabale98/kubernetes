@@ -1,0 +1,21 @@
+apiVersion:  apps/v1 
+kind:  DaemonSet
+metadata:
+  name: nginxdaemonset
+  labels:
+    app: nginxdaemonset
+spec:
+  selector:
+    matchLabels:
+      app: nginxdaemonset
+  template:
+    metadata:
+      name: nginxdaemonset
+      labels:
+        app: nginxdaemonset
+    spec:
+      containers:
+      - name: nginx
+        image: amazon/cloudwatch-agent
+        ports:
+        - containerPort: 80
