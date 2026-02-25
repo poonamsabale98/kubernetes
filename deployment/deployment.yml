@@ -13,7 +13,7 @@ spec:
       maxSurge: 1
   selector:
     matchLabels:
-      apps: nginxdeployment
+      app: nginxdeployment
   template:
     metadata:
       labels:
